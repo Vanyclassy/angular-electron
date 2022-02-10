@@ -15,12 +15,16 @@ import { HomeModule } from './home/home.module';
 import { DetailModule } from './detail/detail.module';
 
 import { AppComponent } from './app.component';
+import { HomePageComponent } from './home-page/home-page.component';
+import { ArticleSearchPageComponent } from './article-search-page/article-search-page.component';
+import { ArticleSearchResultsComponent } from './article-search-results/article-search-results.component';
+import { ToolBarComponent } from './tool-bar/tool-bar.component';
 
 // AoT requires an exported function for factories
 const httpLoaderFactory = (http: HttpClient): TranslateHttpLoader =>  new TranslateHttpLoader(http, './assets/i18n/', '.json');
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, HomePageComponent, ArticleSearchPageComponent, ArticleSearchResultsComponent, ToolBarComponent],
   imports: [
     BrowserModule,
     FormsModule,
